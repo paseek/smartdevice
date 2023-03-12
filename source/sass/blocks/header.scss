@@ -1,4 +1,122 @@
 .header {
-  height: 100px;
   background: $black-to-bottom;
+}
+
+.header__wrapper {
+  width: 100%;
+  max-width: 1300px;
+  height: 120px;
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  @include vp-1023 {
+    height: 100px;
+    padding-top: 20px;
+    padding-right: 70px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+  }
+
+  @include vp-767 {
+    height: 70px;
+    padding-top: 15px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    padding-left: 26px;
+  }
+}
+
+.header__logo {
+  width: 215px;
+  height: 55px;
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.header__list {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 4px;
+  margin: 0;
+
+  @include vp-1023 {
+    width: 100px;
+    padding: 0;
+  }
+}
+
+.header__item {
+
+  &--icon {
+    margin-right: 15px;
+
+    @include vp-1023 {
+      margin-right: 0;
+    }
+  }
+
+  @include vp-1023 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 12px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+
+  @include vp-1023 {
+    padding: 10px;
+  }
+
+  @include vp-767 {
+    padding-top: 5px;
+  }
+}
+
+.header__text {
+  color: $alice-blue;
+  line-height: 18px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.header__button {
+  width: 160px;
+  height: 40px;
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $alice-blue;
+  text-transform: uppercase;
+  border: 1px solid $alice-blue;
+  padding: 8px 15px;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 60px;
+
+  @include vp-1023 {
+    display: none;
+  }
 }

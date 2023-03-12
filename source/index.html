@@ -21,13 +21,34 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="container">
-        <a class="header__logo" href=""></a>
+      <div class="header__wrapper container">
+        <a class="header__logo" href="/">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./img/logo/logo-mobile.png">
+            <img class="header__logo" src="./img/logo/logo.png" alt="Smart Device">
+          </picture>
+        </a>
         <ul class="header__list">
-          <li class="header__item"></li>
-          <li class="header__item"></li>
+          <li class="header__item">
+            <a class="header__link" href="mailto:info@sd.ru">
+              <svg class="header__item--icon" width="20" height="20">
+                <use xlink:href="./img/sprite.svg#header-letter"></use>
+              </svg>
+              <span class="header__text">info@sd.ru</span>
+              <span class="visually-hidden">Электронная почта</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="tel:+74950005252">
+              <svg class="header__item--icon" width="20" height="20">
+                <use xlink:href="./img/sprite.svg#header-phone"></use>
+              </svg>
+              <span class="header__text">+7 (495) 000 52 52</span>
+              <span class="visually-hidden">Номер телефона</span>
+            </a>
+          </li>
         </ul>
-        <a class="header__button" href=""></a>
+        <a class="header__button" href="#">Заказать звонок</a>
       </div>
     </header>
     <main class="main">
