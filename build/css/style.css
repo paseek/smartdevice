@@ -1307,7 +1307,7 @@ button,
 .header__wrapper {
   width: 100%;
   max-width: 1300px;
-  height: 120px;
+  min-height: 120px;
   display: -ms-grid;
   display: grid;
   display: -webkit-box;
@@ -1335,8 +1335,8 @@ button,
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   list-style-type: none;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -1344,6 +1344,9 @@ button,
   padding: 0;
   padding-top: 4px;
   margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 }
 
 .header__item--icon {
@@ -1368,9 +1371,20 @@ button,
   line-height: 18px;
 }
 
+.header__button-wrapper {
+  max-width: 200px;
+  min-height: 40px;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 60px;
+  border: 1px solid #f2f5f6;
+  border-radius: 3px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding-top: 5px;
+}
+
 .header__button {
-  width: 160px;
-  height: 40px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -1379,11 +1393,10 @@ button,
   letter-spacing: 0.05em;
   color: #f2f5f6;
   text-transform: uppercase;
-  border: 1px solid #f2f5f6;
-  padding: 8px 15px;
-  margin: 0;
-  margin-top: 5px;
-  margin-right: 60px;
+  padding-top: 8px;
+  padding-right: 17px;
+  padding-bottom: 13px;
+  padding-left: 16px;
 }
 
 .footer {
@@ -1446,7 +1459,7 @@ button,
   }
 
   .header__wrapper {
-    height: 100px;
+    min-height: 100px;
     padding-top: 20px;
     padding-right: 70px;
     padding-bottom: 25px;
@@ -1475,7 +1488,7 @@ button,
     display: none;
   }
 
-  .header__button {
+  .header__button-wrapper {
     display: none;
   }
 }
@@ -1500,7 +1513,7 @@ button,
   }
 
   .header__wrapper {
-    height: 70px;
+    min-height: 70px;
     padding-top: 15px;
     padding-right: 35px;
     padding-bottom: 20px;
