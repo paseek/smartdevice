@@ -20,8 +20,20 @@
   }
 }
 
+@mixin focus-focus {
+  &:focus {
+    @content;
+  }
+}
+
 @mixin active {
   &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin active-active {
+  &:active {
     @content;
   }
 }

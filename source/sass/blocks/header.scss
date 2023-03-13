@@ -82,6 +82,21 @@
   padding-bottom: 10px;
   padding-left: 8px;
 
+  @include focus {
+    outline: 2px solid $deep-sky-blue;
+    border-radius: 5px;
+  }
+
+  @include active-active {
+    opacity: 1;
+    color: white;
+  }
+
+  @include active {
+    opacity: 1;
+    color: white;
+  }
+
   @include vp-1023 {
     padding: 10px;
   }
@@ -98,15 +113,19 @@
   @include vp-1023 {
     display: none;
   }
+
+  @include hover-focus {
+    color: $deep-sky-blue;
+  }
 }
 
 .header__button-wrapper {
   max-width: 200px;
   min-height: 40px;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-right: 60px;
-  border: 1px solid $alice-blue;
+  // border: 1px solid $alice-blue;
   border-radius: 3px;
   align-self: flex-start;
   padding-top: 5px;
@@ -115,6 +134,11 @@
     display: none;
   }
 }
+
+// .header__button-wrapper:focus {
+//   border: none;
+//   outline: 2px solid $deep-sky-blue;
+// }
 
 .header__button {
   font-family: $ff-roboto;
@@ -125,8 +149,34 @@
   letter-spacing: 0.05em;
   color: $alice-blue;
   text-transform: uppercase;
-  padding-top: 8px;
+  border: 1px solid $alice-blue;
+  padding-top: 7px;
   padding-right: 17px;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
   padding-left: 16px;
+
+  @include hover {
+    color: $deep-sky-blue;
+  }
+
+  @include focus {
+    outline: 2px solid $deep-sky-blue;
+    border-color: transparent;
+    border-radius: 5px;
+  }
+
+  @include active-active {
+    background-color: $deep-sky-blue;
+    opacity: 1;
+  }
+
+  @include active {
+    background-color: $deep-sky-blue;
+    opacity: 1;
+  }
 }
+
+// .header__button:active {
+//   border-color: $color-neon-blue;
+//   background-color: $color-neon-blue;
+// }
