@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 // eslint-disable-next-line object-curly-spacing
 import {initAccordion} from './modules/accordion/init-accordion';
 
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

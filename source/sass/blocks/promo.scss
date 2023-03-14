@@ -1,0 +1,142 @@
+.promo {
+  min-height: 880px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  @include vp-1023 {
+    min-height: 640px;
+  }
+}
+
+.promo__wrapper {
+  width: 100%;
+  max-width: 1300px;
+  padding-top: 300px;
+  padding-left: 165px;
+
+  @include vp-1023 {
+    padding-top: 176px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 148px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.promo__wrapper h1 {
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 95px;
+  letter-spacing: 0.07em;
+  color: $alice-blue;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 36px;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 4px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 9px;
+  }
+}
+
+.promo__wrapper p {
+  font-family: $ff-ptmono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: $alice-blue;
+  margin: 0;
+  margin-bottom: 45px;
+
+  @include vp-1023 {
+    margin-bottom: 57px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 45px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.promo__link {
+  display: inline-block;
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $alice-blue;
+  background-color: $deep-sky-blue;
+  border-radius: 3px;
+  padding: 17px 27px;
+  transition: 0.3s;
+
+  @include hover-focus {
+    color: $deep-sky-blue;
+    background: $alice-blue;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+
+  @include active-active {
+    opacity: 0.5;
+  }
+
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 37px;
+    margin-left: 0px;
+  }
+}
+
+.promo__link-text {
+  &--mobile {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
