@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import rename from 'gulp-rename';
 import imagemin from 'gulp-imagemin';
-// import webp from 'gulp-webp';
 import svgstore from 'gulp-svgstore';
 import pngQuant from 'imagemin-pngquant';
 import mozJpeg from 'imagemin-mozjpeg';
