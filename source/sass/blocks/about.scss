@@ -1,0 +1,138 @@
+.about {
+  margin-bottom: 100px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+  gap: 100px;
+
+  img {
+    max-width: 150px;
+    height: 320px;
+  }
+
+  @include vp-1023 {
+    gap: 29px;
+    // align-items: start;
+    padding: 0;
+    padding-right: 46px;
+    padding-left: 46px;
+  }
+
+  @include vp-767 {
+    gap: 0;
+    padding: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  img {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.about__content {
+  h2 {
+    font-family: $ff-roboto;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 400;
+    color: $color-black-pearl;
+    margin: 0;
+    margin-bottom: 13px;
+
+    @include vp-1023 {
+      margin-top: -6px;
+
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 39px;
+      margin-top: -5px;
+    }
+  }
+
+  p {
+    font-family: $ff-ptmono;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $color-black-pearl;
+    margin: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include vp-1023 {
+      // margin: 0 0 19px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+.about__text {
+
+  &--mob {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.about__text-more {
+  p:first-child {
+    margin-top: 20px;
+  }
+}
+
+
+.about__button {
+  display: inline-block;
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $deep-sky-blue;
+  border: 1px solid $deep-sky-blue;
+  border-radius: 3px;
+  background-color: transparent;
+  text-align: center;
+  padding: 13px 50px;
+  margin-top: 20px;
+
+  @include vp-1023 {
+    margin-top: 16px;
+  }
+
+  @include vp-767 {
+    margin-top: 13px;
+    padding-top: 7px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+  }
+
+  @include hover-focus {
+    transition: background $trans-default;
+    color: $alice-blue;
+    background: $deep-sky-blue;
+    outline: 2px solid $deep-sky-blue;
+  }
+}

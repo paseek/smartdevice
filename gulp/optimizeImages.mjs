@@ -69,7 +69,7 @@ const optimizePng = () =>
 const createWebp = () => {
   const root = '';
   return gulp
-    .src(`source/img/${root}**/*.{png,jpg}`)
+    .src(`source/img/${root}**/*.{png,jpg,jpeg}`)
     .pipe(squoosh({
       webp: {},
     }))

@@ -2,7 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 // eslint-disable-next-line object-curly-spacing
-import {initAccordion} from './modules/accordion/init-accordion';
+import {initMyAccordion} from './modules/accordion/my-accordion';
+import {initAccordions} from './modules/accordion/init-accordion';
 
 
 // ---------------------------------
@@ -21,7 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    initAccordion();
+    initMyAccordion();
+    initAccordions();
     const form = new Form();
     window.form = form;
     form.init();
