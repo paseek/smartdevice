@@ -58,11 +58,9 @@
 
   &__content {
     position: relative;
-
-    width: 600px;
+    width: 500px;
     padding: 40px;
-
-    background-color: $color-default-white;
+    background-color: $deep-sky-blue-second;
 
     @include vp-767 {
       width: 100%;
@@ -72,8 +70,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 25px;
+    right: 25px;
     z-index: 1;
 
     width: 40px;
@@ -116,4 +114,142 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__title {
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.modal__description {
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.modal__form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  column-gap: 0;
+
+  input {
+    width: 100%;
+    color: $color-default-white;
+    background-color: $black-pearl-opacity;
+    border: none;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    outline: none;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+
+  label {
+    order: 1;
+    padding-left: 34px;
+  }
+
+  textarea {
+    grid-column: 1/-1;
+    color: $color-default-white;
+    background-color: $black-pearl-opacity;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+
+  button {
+    height: min-content;
+    font-family: $ff-roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: $color-default-white;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    background-color: $color-black-pearl-second;
+    cursor: pointer;
+    padding-top: 13px;
+    padding-right: 25px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+  }
+
+  .modal__checkbox {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+    opacity: 0.8;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
+      left: -26px;
+      top: 0;
+    }
+  }
+}
+
+.modal__form input[type="checkbox"]:checked + .modal__checkbox:after,
+.modal__form input[type="checkbox"]:not(:checked) + .modal__checkbox:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -22px;
+}
+
+.modal__form input[type="checkbox"]:checked + .modal__checkbox::after {
+  width: 7px;
+  height: 4px;
+  border-radius: 1px;
+  border-left: 2px solid $color-default-white;
+  border-bottom: 2px solid $color-default-white;
+  transform: rotate(-45deg);
+}
+
+.modal__form input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  transform: translate(-18px, 14px);
 }
