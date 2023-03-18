@@ -149,13 +149,7 @@
   width: 60px;
   height: 60px;
   background-color: $deep-sky-blue;
-  border-radius: 3px 0px 0px 0px;
-
-  // @include hover-focus {
-  //   transition: background $trans-default;
-  //   color: $deep-sky-blue;
-  //   background: $alice-blue;
-  // }
+  border-radius: 3px 0 0 0;
 
   &::before,
   &::after {
@@ -200,5 +194,4 @@
   &::after {
     background-color: $deep-sky-blue;
   }
-
 }

@@ -7,7 +7,6 @@
 
 .header__wrapper {
   min-height: 120px;
-  display: grid;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -96,12 +95,12 @@
 
   @include active-active {
     opacity: 1;
-    color: white;
+    color: $color-default-white;
   }
 
   @include active {
     opacity: 1;
-    color: white;
+    color: $color-default-white;
   }
 
   @include vp-1023 {
