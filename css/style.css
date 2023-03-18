@@ -1434,8 +1434,6 @@ button,
 
 .header__wrapper {
   min-height: 120px;
-  display: -ms-grid;
-  display: grid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1505,12 +1503,12 @@ button,
 
 .header__link:active {
   opacity: 1;
-  color: white;
+  color: #ffffff;
 }
 
 .header__link.focus-visible:active {
   opacity: 1;
-  color: white;
+  color: #ffffff;
 }
 
 .header__text {
@@ -1773,7 +1771,6 @@ button,
   border: 1px solid #00b2ff;
   border-radius: 3px;
   background-color: transparent;
-  text-align: center;
   padding: 13px 50px;
   margin-top: 20px;
 }
@@ -1877,7 +1874,7 @@ button,
   width: 60px;
   height: 60px;
   background-color: #00b2ff;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
 }
 
 .services__button::before,
@@ -2761,7 +2758,7 @@ button,
     font-size: 14px;
     line-height: 16px;
     padding: 12px 37px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .promo__link-text--mobile {
