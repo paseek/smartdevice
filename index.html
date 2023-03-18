@@ -231,8 +231,8 @@
                 <label class="visually-hidden" for="name">Имя</label>
                 <input id="name" name="name" type="text" minlength="1" placeholder="Имя" required tabindex="1">
               </div>
-              <div class="feedback__field custom-input" data-validate-type="phone" ,
-                data-message-base="Укажите свой телефон" , data-required>
+              <div class="feedback__field custom-input" data-validate-type="phone"
+                data-message-base="Укажите свой телефон" data-required>
                 <label class="visually-hidden" for="phone">Телефон</label>
                 <input id="phone" name="phone" type="tel" placeholder="Телефон" required tabindex="2">
               </div>
@@ -258,6 +258,7 @@
               <button type="submit" tabindex="4">Задать вопрос</button>
             </form>
           </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -347,8 +348,6 @@
     </footer>
   </div>
 
-  </div>
-
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
@@ -365,17 +364,17 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal__field custom-input" data-validate-type="text" data-limitation="name" data-required>
               <label class="visually-hidden" for="name">Имя</label>
-              <input id="name" name="name" type="text" minlength="1" placeholder="Имя" data-focus required>
+              <input id="modal-name" name="modal-name" type="text" minlength="1" placeholder="Имя" data-focus required>
             </div>
             <div class="modal__field custom-input" data-validate-type="phone" data-required>
               <label class="visually-hidden" for="phone">Телефон</label>
-              <input id="phone" name="phone" type="tel" placeholder="Телефон" minlength="16" required>
+              <input id="modal-phone" name="modal-phone" type="tel" placeholder="Телефон" minlength="16" required>
             </div>
             <label class="visually-hidden" for="question">Ваш вопрос</label>
-            <textarea id="question" name="question" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+            <textarea id="modal-question" name="modal-question" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
             <label class="custom-toggle" data-validate-type="checkbox" data-parent-validate="base"
               data-message-base="Заполните все данные">
-              <input id="agreement" name="agreement" type="checkbox" required>
+              <input id="modal-agreement" name="modal-agreement" type="checkbox" required>
               <span class="modal__checkbox">Я согласен на обработку персональных данных</span>
             </label>
             <button type="submit">Отправить</button>
