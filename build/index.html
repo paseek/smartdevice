@@ -227,35 +227,38 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
               <div class="feedback__field custom-input" data-validate-type="text" data-limitation="name"
                 data-message-base="Укажите свое имя" data-message-extra="Проверьте корректность заполнения поля"
-                data-required="">
+                data-required>
                 <label class="visually-hidden" for="name">Имя</label>
-                <input id="name" name="name" type="text" minlength="1" placeholder="Имя" required>
+                <input id="name" name="name" type="text" minlength="1" placeholder="Имя" required tabindex="1">
               </div>
               <div class="feedback__field custom-input" data-validate-type="phone" ,
                 data-message-base="Укажите свой телефон" , data-required>
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+                <input id="phone" name="phone" type="tel" placeholder="Телефон" required tabindex="2">
               </div>
               <label class="visually-hidden" for="question">Ваш вопрос</label>
-              <textarea id="question" name="question" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
-              <label class="custom-toggle" data-validate-type="checkbox" ,
+              <textarea id="question" name="question" cols="30" rows="7" placeholder="Ваш вопрос"
+                tabindex="3"></textarea>
+
+              <div class="feedback__agreed custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                <label>
+                  <input id="agreement" name="agreement" type="checkbox" required tabindex="5">
+                  <span class="feedback__checkbox custom-toggle__icon"></span>
+                  <span class="custom-toggle__label">Я согласен на обработку<br>персональных
+                    данных</span>
+                </label>
+
+              </div>
+
+              <!-- <label class="custom-toggle" data-validate-type="checkbox" ,
                 data-message-base="Необходимо отметить чекбокс">
                 <input id="agreement" name="agreement" type="checkbox" required>
-                <span class="feedback__checkbox">Я согласен на обработку персональных данных</span>
-              </label>
-              <button type="submit">Задать вопрос</button>
+                <span class="feedback__checkbox custom-toggle__icon">Я согласен на обработку персональных данных</span>
+              </label> -->
+              <button type="submit" tabindex="4">Задать вопрос</button>
             </form>
           </div>
       </section>
-      <!-- <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section> -->
     </main>
     <footer class="footer">
       <div class="footer__wrapper container">
@@ -346,7 +349,6 @@
 
   </div>
 
-  <!-- Модалки -->
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>

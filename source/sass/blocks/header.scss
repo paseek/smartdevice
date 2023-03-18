@@ -31,12 +31,6 @@
   }
 }
 
-// .header__wrapper.is-sticky {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-// }
-
 .header__logo {
   width: 215px;
   height: 55px;
@@ -148,11 +142,6 @@
   }
 }
 
-// .header__button-wrapper:focus {
-//   border: none;
-//   outline: 2px solid $deep-sky-blue;
-// }
-
 .header__button {
   font-family: $ff-roboto;
   font-weight: 700;
@@ -188,8 +177,3 @@
     opacity: 1;
   }
 }
-
-// .header__button:active {
-//   border-color: $color-neon-blue;
-//   background-color: $color-neon-blue;
-// }

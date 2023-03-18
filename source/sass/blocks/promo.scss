@@ -102,7 +102,6 @@
   background-color: $deep-sky-blue;
   border-radius: 3px;
   padding: 17px 27px;
-  // transition: 0.3s;
 
   @include hover-focus {
     transition: background $trans-default;
