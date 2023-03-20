@@ -65,15 +65,6 @@
 }
 
 .header__item {
-
-  &--icon {
-    margin-right: 15px;
-
-    @include vp-1023 {
-      margin-right: 0;
-    }
-  }
-
   @include vp-1023 {
     width: 40px;
     height: 40px;
@@ -87,6 +78,14 @@
   padding-right: 12px;
   padding-bottom: 10px;
   padding-left: 8px;
+
+  &-icon {
+    margin-right: 15px;
+
+    @include vp-1023 {
+      margin-right: 0;
+    }
+  }
 
   @include focus {
     outline: 2px solid $deep-sky-blue;

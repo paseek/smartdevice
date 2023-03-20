@@ -141,7 +141,9 @@
   grid-template-columns: 1fr;
   row-gap: 20px;
   column-gap: 0;
+}
 
+.modal__form {
   input {
     width: 100%;
     color: $color-default-white;
@@ -223,15 +225,11 @@
   }
 }
 
-.modal__form input[type="checkbox"]:checked + .modal__checkbox:after,
-.modal__form input[type="checkbox"]:not(:checked) + .modal__checkbox:after {
+.modal__form input[type="checkbox"]:checked + .modal__checkbox::after {
   content: "";
   position: absolute;
   top: 5px;
   left: -22px;
-}
-
-.modal__form input[type="checkbox"]:checked + .modal__checkbox::after {
   width: 7px;
   height: 4px;
   border-radius: 1px;

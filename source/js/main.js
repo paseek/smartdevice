@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-// eslint-disable-next-line object-curly-spacing
 import {initMyAccordion} from './modules/accordion/my-accordion';
 import {initAccordions} from './modules/accordion/init-accordion';
 

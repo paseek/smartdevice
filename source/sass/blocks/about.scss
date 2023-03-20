@@ -13,6 +13,10 @@
   img {
     max-width: 150px;
     height: 320px;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   @include vp-1023 {
@@ -27,12 +31,6 @@
     padding: 0;
     padding-right: 25px;
     padding-left: 25px;
-  }
-
-  img {
-    @include vp-767 {
-      display: none;
-    }
   }
 }
 
@@ -78,7 +76,7 @@
 }
 
 .about__text {
-  &--mob {
+  &-mob {
     @include vp-767 {
       display: none;
     }

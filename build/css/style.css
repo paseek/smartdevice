@@ -814,7 +814,7 @@ button,
   column-gap: 0;
 }
 
-.modal__form form input {
+.modal__form input {
   width: 100%;
   color: #ffffff;
   background-color: rgba(4, 20, 39, 0.15);
@@ -826,34 +826,34 @@ button,
   outline: none;
 }
 
-.modal__form form input::-webkit-input-placeholder {
+.modal__form input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input::-moz-placeholder {
+.modal__form input::-moz-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input:-ms-input-placeholder {
+.modal__form input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input::-ms-input-placeholder {
+.modal__form input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input::placeholder {
+.modal__form input::placeholder {
   color: #ffffff;
 }
 
-.modal__form form label {
+.modal__form label {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
   padding-left: 34px;
 }
 
-.modal__form form textarea {
+.modal__form textarea {
   grid-column: 1/-1;
   color: #ffffff;
   background-color: rgba(4, 20, 39, 0.15);
@@ -866,27 +866,27 @@ button,
   margin-bottom: 5px;
 }
 
-.modal__form form textarea::-webkit-input-placeholder {
+.modal__form textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea::-moz-placeholder {
+.modal__form textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea:-ms-input-placeholder {
+.modal__form textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea::-ms-input-placeholder {
+.modal__form textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea::placeholder {
+.modal__form textarea::placeholder {
   color: #ffffff;
 }
 
-.modal__form form button {
+.modal__form button {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -908,7 +908,7 @@ button,
   padding-left: 25px;
 }
 
-.modal__form form .modal__checkbox {
+.modal__form .modal__checkbox {
   position: relative;
   display: block;
   font-weight: 400;
@@ -918,7 +918,7 @@ button,
   opacity: 0.8;
 }
 
-.modal__form form .modal__checkbox::before {
+.modal__form .modal__checkbox::before {
   position: absolute;
   content: "";
   width: 15px;
@@ -930,15 +930,11 @@ button,
   top: 0;
 }
 
-.modal__form input[type=checkbox]:checked + .modal__checkbox:after,
-.modal__form input[type=checkbox]:not(:checked) + .modal__checkbox:after {
+.modal__form input[type=checkbox]:checked + .modal__checkbox::after {
   content: "";
   position: absolute;
   top: 5px;
   left: -22px;
-}
-
-.modal__form input[type=checkbox]:checked + .modal__checkbox::after {
   width: 7px;
   height: 4px;
   border-radius: 1px;
@@ -1434,8 +1430,6 @@ button,
 
 .header__wrapper {
   min-height: 120px;
-  display: -ms-grid;
-  display: grid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1481,10 +1475,6 @@ button,
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 }
 
-.header__item--icon {
-  margin-right: 15px;
-}
-
 .header__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1498,6 +1488,10 @@ button,
   padding-left: 8px;
 }
 
+.header__link-icon {
+  margin-right: 15px;
+}
+
 .header__link.focus-visible:focus {
   outline: 2px solid #00b2ff;
   border-radius: 5px;
@@ -1505,12 +1499,12 @@ button,
 
 .header__link:active {
   opacity: 1;
-  color: white;
+  color: #ffffff;
 }
 
 .header__link.focus-visible:active {
   opacity: 1;
-  color: white;
+  color: #ffffff;
 }
 
 .header__text {
@@ -1773,7 +1767,6 @@ button,
   border: 1px solid #00b2ff;
   border-radius: 3px;
   background-color: transparent;
-  text-align: center;
   padding: 13px 50px;
   margin-top: 20px;
 }
@@ -1877,7 +1870,7 @@ button,
   width: 60px;
   height: 60px;
   background-color: #00b2ff;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
 }
 
 .services__button::before,
@@ -1976,7 +1969,7 @@ button,
   column-gap: 30px;
 }
 
-.feedback__form form input {
+.feedback__form input {
   width: 100%;
   color: #ffffff;
   background-color: rgba(4, 20, 39, 0.15);
@@ -1988,7 +1981,7 @@ button,
   outline: none;
 }
 
-.feedback__form form input::-webkit-input-placeholder {
+.feedback__form input::-webkit-input-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -1996,7 +1989,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form input::-moz-placeholder {
+.feedback__form input::-moz-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2004,7 +1997,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form input:-ms-input-placeholder {
+.feedback__form input:-ms-input-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2012,7 +2005,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form input::-ms-input-placeholder {
+.feedback__form input::-ms-input-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2020,7 +2013,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form input::placeholder {
+.feedback__form input::placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2028,7 +2021,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form textarea {
+.feedback__form textarea {
   grid-column: 1/-1;
   color: #ffffff;
   background-color: rgba(4, 20, 39, 0.15);
@@ -2041,7 +2034,7 @@ button,
   margin-bottom: 15px;
 }
 
-.feedback__form form textarea::-webkit-input-placeholder {
+.feedback__form textarea::-webkit-input-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2049,7 +2042,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form textarea::-moz-placeholder {
+.feedback__form textarea::-moz-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2057,7 +2050,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form textarea:-ms-input-placeholder {
+.feedback__form textarea:-ms-input-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2065,7 +2058,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form textarea::-ms-input-placeholder {
+.feedback__form textarea::-ms-input-placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2073,7 +2066,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form textarea::placeholder {
+.feedback__form textarea::placeholder {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -2081,7 +2074,7 @@ button,
   color: #ffffff;
 }
 
-.feedback__form form button {
+.feedback__form button {
   max-width: 265px;
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -2104,7 +2097,7 @@ button,
   padding-left: 25px;
 }
 
-.feedback__form form button.focus-visible:focus {
+.feedback__form button.focus-visible:focus {
   -webkit-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
@@ -2175,6 +2168,7 @@ button,
 
 .footer__logo {
   margin-bottom: 24px;
+  margin-left: -4px;
 }
 
 .footer__social-list {
@@ -2443,13 +2437,13 @@ button,
     padding: 0;
   }
 
-  .header__item--icon {
-    margin-right: 0;
-  }
-
   .header__item {
     width: 40px;
     height: 40px;
+  }
+
+  .header__link-icon {
+    margin-right: 0;
   }
 
   .header__link {
@@ -2614,11 +2608,11 @@ button,
     margin-bottom: 26px;
   }
 
-  .feedback__form form textarea {
+  .feedback__form textarea {
     margin-bottom: 16px;
   }
 
-  .feedback__form form button {
+  .feedback__form button {
     padding-top: 15px;
     padding-bottom: 11px;
   }
@@ -2657,6 +2651,10 @@ button,
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .footer__logo {
+    margin-left: 0;
   }
 
   .footer__social-list {
@@ -2761,7 +2759,7 @@ button,
     font-size: 14px;
     line-height: 16px;
     padding: 12px 37px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .promo__link-text--mobile {
@@ -2825,15 +2823,15 @@ button,
     line-height: 19px;
   }
 
+  .about__wrapper img {
+    display: none;
+  }
+
   .about__wrapper {
     gap: 0;
     padding: 0;
     padding-right: 25px;
     padding-left: 25px;
-  }
-
-  .about__wrapper img {
-    display: none;
   }
 
   .about__content h2 {
@@ -2847,7 +2845,7 @@ button,
     line-height: 19px;
   }
 
-  .about__text--mob {
+  .about__text-mob {
     display: none;
   }
 
@@ -2927,12 +2925,12 @@ button,
     column-gap: 0;
   }
 
-  .feedback__form form textarea {
+  .feedback__form textarea {
     padding-bottom: 26px;
     margin-bottom: 9px;
   }
 
-  .feedback__form form button {
+  .feedback__form button {
     max-width: 270px;
   }
 
@@ -2969,6 +2967,7 @@ button,
 
   .footer__logo {
     margin-bottom: 9px;
+    margin-left: -4px;
   }
 
   .footer__social-list {
@@ -3150,7 +3149,7 @@ button,
     box-shadow: 0 0 0 2px #00b2ff;
   }
 
-  .feedback__form form button:hover:not(.focus-visible) {
+  .feedback__form button:hover:not(.focus-visible) {
     -webkit-transition: background 0.3s ease;
     -o-transition: background 0.3s ease;
     transition: background 0.3s ease;

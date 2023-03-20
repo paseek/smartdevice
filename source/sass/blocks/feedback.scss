@@ -91,18 +91,18 @@
       margin-bottom: 36px;
     }
   }
-}
 
-.feedback__form form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 20px;
-  column-gap: 30px;
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 30px;
 
-  @include vp-767 {
-    grid-template-columns: 1fr;
-    row-gap: 21px;
-    column-gap: 0;
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      row-gap: 21px;
+      column-gap: 0;
+    }
   }
 
   input {

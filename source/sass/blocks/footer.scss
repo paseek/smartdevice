@@ -55,9 +55,15 @@
 
 .footer__logo {
   margin-bottom: 24px;
+  margin-left: -4px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
 
   @include vp-767 {
     margin-bottom: 9px;
+    margin-left: -4px;
   }
 }
 
@@ -290,7 +296,6 @@
 }
 
 .is-active[data-spoiler-toggle] {
-
   &::before,
   &::after {
     content: "";
