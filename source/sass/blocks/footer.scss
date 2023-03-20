@@ -109,7 +109,8 @@
   width: 30px;
 }
 
-.footer__nav-wrapper {
+
+.footer__nav-line {
   position: relative;
 
   @include vp-767 {
@@ -134,27 +135,14 @@
       left: 50%;
       transform: translateX(-50%);
     }
-
     padding: 12px 0;
   }
 
   &--site {
-    display: flex;
-    justify-content: flex-start;
     width: 39%;
-
-    .footer__nav-link {
-      user-select: none;
-    }
 
     @include vp-1023 {
       width: 100%;
-      flex-direction: column;
-      padding-right: 75px;
-    }
-
-    @include vp-767 {
-      padding-right: 0;
     }
   }
 
@@ -167,25 +155,74 @@
   }
 }
 
-.footer__nav-wrapper h2 {
-  font-family: $ff-roboto;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $color-default-white;
-  // margin: 5px 0 25px;
-  margin: 6px 0 23px;
+.footer__nav-wrapper {
   position: relative;
 
-  @include vp-1023 {
-    margin: 5px 0 22px;
+  @include vp-767 {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 1px;
+      width: 15px;
+      height: 1px;
+      background-color: $silver;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
   }
 
-  @include vp-767 {
-    margin: 0;
-    padding: 10px 25px 10px 0;
+  // &--site {
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   // width: 39%;
+
+  //   .footer__nav-link {
+  //     user-select: none;
+  //   }
+
+  //   @include vp-1023 {
+  //     width: 100%;
+  //     flex-direction: column;
+  //     padding-right: 75px;
+  //   }
+
+  //   @include vp-767 {
+  //     padding-right: 0;
+  //   }
+  // }
+
+  &--contacts {
+    // width: 27%;
+
+    @include vp-1023 {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-default-white;
+    // margin: 5px 0 25px;
+    margin: 6px 0 23px;
+    position: relative;
+
+    @include vp-1023 {
+      margin: 5px 0 22px;
+    }
+
+    @include vp-767 {
+      margin: 0;
+      padding: 10px 25px 10px 0;
+    }
   }
 }
 
@@ -194,12 +231,33 @@
 }
 
 .footer__list-wrapper {
-  width: 50%;
-  margin-right: 19px;
+  width: 100%;
+  // margin-right: 30px;
 
   @include vp-1023 {
     width: 100%;
     margin: 0;
+  }
+}
+
+.footer__accordion-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 36px;
+
+  .footer__nav-link {
+    user-select: none;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    flex-direction: column;
+    padding-right: 75px;
+    gap: 0;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
   }
 }
 
@@ -208,13 +266,25 @@
   margin: 0;
   padding: 0;
 
+  &--site {
+    width: 50%;
+
+    @include vp-1023 {
+      width: 100%;
+    }
+  }
+
   &--more {
     // padding-top: 46px;
-    padding-top: 45px;
+    // padding-top: 45px;
 
     @include vp-1023 {
       padding-top: 0;
     }
+  }
+
+  @include vp-767 {
+    margin-top: -2px;
   }
 }
 
@@ -238,7 +308,6 @@
 
   &--tel {
     &:not(:last-child) {
-      // margin-bottom: 8px;
       margin-bottom: 6px;
     }
 
@@ -295,29 +364,29 @@
   }
 }
 
-.is-active[data-spoiler-toggle] {
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 17px;
-    right: 0;
-    width: 15px;
-    height: 1px;
-    background-color: $silver;
-  }
+// .is-active {
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 17px;
+//     right: 0;
+//     width: 15px;
+//     height: 1px;
+//     background-color: $silver;
+//   }
 
-  &::after {
-    transform: rotate(90deg);
-  }
-}
+//   &::after {
+//     transform: rotate(90deg);
+//   }
+// }
 
-.footer__nav-wrapper.is-closed .footer__nav-list--site,
-.footer__nav-wrapper.is-closed .footer__nav-list--contacts {
-  display: none;
-}
+// .footer__nav-wrapper.is-closed .footer__nav-list--site,
+// .footer__nav-wrapper.is-closed .footer__nav-list--contacts {
+//   display: none;
+// }
 
-.is-open[data-spoiler-toggle] {
+.is-active[data-accordion] {
   &::after {
     display: none;
   }
