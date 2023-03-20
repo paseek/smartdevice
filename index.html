@@ -133,7 +133,7 @@
                   до&nbsp;10&nbsp;дней.
                 </p>
                 <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE,
-                  HOLGLITRONIC,
+                  HOLGLITRONnpm IC,
                   REFOND. <span class="about__text-mob">Печатные платы и&nbsp;комплектующие Service Devices применяются
                     на&nbsp;предприятиях
                     Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
@@ -262,7 +262,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__wrapper container">
+      <div class="footer__wrapper container" data-accordion="parent" data-destroy="(max-width: 767px)">
         <div class="footer__social-wrapper">
           <a class="footer__logo">
             <img class="footer__logo-image" src="img/logo/logo.svg" width="215" height="55" alt="Логотип smart device.">
@@ -297,52 +297,58 @@
             </li>
           </ul>
         </div>
-        <div class="footer__nav-wrapper footer__nav-wrapper--site" data-spoiler>
-          <div class="footer__list-wrapper">
-            <h2 class="footer__nav-title" data-spoiler-toggle>Разделы сайта</h2>
-            <ul class="footer__nav-list footer__nav-list--site">
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#">О Компании</a>
+        <div class="footer__nav-line footer__nav-line--site">
+          <div class="footer__nav-wrapper footer__nav-wrapper--site" data-accordion="element">
+            <div class="footer__list-wrapper">
+              <h2 class="footer__nav-title" data-accordion="button">Разделы сайта</h2>
+              <div class="footer__accordion-wrapper" data-accordion="content">
+                <ul class="footer__nav-list footer__nav-list--site">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">О Компании</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Продукты</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Производство печатных плат</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Монтаж печатных плат</a>
+                  </li>
+                </ul>
+                <ul class="footer__nav-list footer__nav-list--site footer__nav-list--more">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Комплектующие</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Доставка</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__nav-line footer__nav-line--contacts">
+          <div class="footer__nav-wrapper footer__nav-wrapper--contacts" data-accordion="element">
+            <h2 class="footer__nav-title" data-accordion="button">Наш офис</h2>
+            <ul class="footer__nav-list footer__nav-list--contacts" data-accordion="content">
+              <li class=" footer__nav-item footer__nav-item--address">
+                <p class="footer__address">г. Мытищи, Олимпийский проспект,<br> д.10</p>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#">Продукты</a>
+              <li class="footer__nav-item footer__nav-item--tel">
+                <a class="footer__nav-link footer__nav-link--tel" href="tel:+74955894050">+7 (495) 589-40-50</a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#">Производство печатных плат</a>
+              <li class="footer__nav-item footer__nav-item--tel">
+                <a class="footer__nav-link footer__nav-link--tel" href="tel:+79253895829">+7 (925) 389-58-29</a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#">Монтаж печатных плат</a>
+              <li class="footer__nav-item footer__nav-item--tel">
+                <a class="footer__nav-link footer__nav-link--tel" href="tel:+79253647813">+7 (925) 364-78-13</a>
               </li>
             </ul>
           </div>
-          <ul class="footer__nav-list footer__nav-list--site footer__nav-list--more">
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Комплектующие</a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Доставка</a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__nav-wrapper footer__nav-wrapper--contacts" data-spoiler>
-          <h2 class="footer__nav-title" data-spoiler-toggle>Наш офис</h2>
-          <ul class="footer__nav-list footer__nav-list--contacts">
-            <li class=" footer__nav-item footer__nav-item--address">
-              <p class="footer__address">г. Мытищи, Олимпийский проспект,<br> д.10</p>
-            </li>
-            <li class="footer__nav-item footer__nav-item--tel">
-              <a class="footer__nav-link footer__nav-link--tel" href="tel:+74955894050">+7 (495) 589-40-50</a>
-            </li>
-            <li class="footer__nav-item footer__nav-item--tel">
-              <a class="footer__nav-link footer__nav-link--tel" href="tel:+79253895829">+7 (925) 389-58-29</a>
-            </li>
-            <li class="footer__nav-item footer__nav-item--tel">
-              <a class="footer__nav-link footer__nav-link--tel" href="tel:+79253647813">+7 (925) 364-78-13</a>
-            </li>
-          </ul>
         </div>
       </div>
     </footer>
