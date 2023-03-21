@@ -1,6 +1,6 @@
 module.exports = {
   rules: {
-    'arraysInObjects': false,
+    // 'arraysInObjects': false,
     'font-family-no-duplicate-names': true,
     'font-family-no-missing-generic-family-keyword': true,
     'no-descending-specificity': null,
