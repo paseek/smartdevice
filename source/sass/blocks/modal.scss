@@ -39,6 +39,8 @@
     width: 100%;
     min-height: 100%;
     padding: 60px 40px;
+    margin-top: -90px;
+    margin-left: -8px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -52,6 +54,7 @@
 
     width: 100%;
     height: 100%;
+    background: $modal-overlay;
 
     cursor: pointer;
   }
@@ -59,8 +62,12 @@
   &__content {
     position: relative;
     width: 500px;
-    padding: 40px;
+    padding-top: 37px;
+    padding-right: 40px;
+    padding-bottom: 42px;
+    padding-left: 40px;
     background-color: $deep-sky-blue-second;
+    border-radius: 3px;
 
     @include vp-767 {
       width: 100%;
@@ -70,8 +77,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 17px;
+    right: 15px;
     z-index: 1;
 
     width: 40px;
@@ -122,8 +129,10 @@
   font-size: 30px;
   line-height: 42px;
   color: $color-default-white;
-  margin: 0;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 .modal__description {
@@ -150,8 +159,8 @@
     background-color: $black-pearl-opacity;
     border: none;
     border-radius: 3px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 15px;
     outline: none;
 
@@ -162,7 +171,10 @@
 
   label {
     order: 1;
-    padding-left: 34px;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   textarea {
@@ -200,6 +212,19 @@
     padding-right: 25px;
     padding-bottom: 13px;
     padding-left: 25px;
+    user-select: none;
+
+    @include hover-focus {
+      transition: background $trans-default;
+      color: $deep-sky-blue;
+      background: $alice-blue;
+    }
+  }
+
+  .modal__field {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .modal__checkbox {
@@ -210,6 +235,7 @@
     line-height: 16px;
     color: $color-default-white;
     opacity: 0.8;
+    padding-left: 34px;
 
     &::before {
       position: absolute;
@@ -219,17 +245,22 @@
       background-color: transparent;
       border: 1px solid $color-default-white;
       border-radius: 2px;
-      left: -26px;
+      left: 0;
       top: 0;
     }
   }
+}
+
+.modal__form [type="checkbox"]:focus + .modal__checkbox {
+  outline: 2px solid $color-default-white;
+  outline-offset: 2px;
 }
 
 .modal__form input[type="checkbox"]:checked + .modal__checkbox::after {
   content: "";
   position: absolute;
   top: 5px;
-  left: -22px;
+  left: 4px;
   width: 7px;
   height: 4px;
   border-radius: 1px;
@@ -250,4 +281,26 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
   transform: translate(-18px, 14px);
+}
+
+.modal__form input:hover,
+.modal__form textarea:hover,
+.modal__form input:focus,
+.modal__form textarea:focus {
+  background: $color-autofill;
+  outline: 2px solid $color-default-white;
+}
+
+.modal__form input:-webkit-autofill,
+.modal__form input:-webkit-autofill:hover,
+.modal__form input:-webkit-autofill:focus,
+.modal__form textarea:-webkit-autofill,
+.modal__form textarea:-webkit-autofill:hover,
+.modal__form textarea:-webkit-autofill:focus,
+.modal__form select:-webkit-autofill,
+.modal__form select:-webkit-autofill:hover,
+.modal__form select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $color-default-white;
+  -webkit-box-shadow: 0 0 0 40rem $color-autofill inset;
+  outline: 2px solid $color-default-white;
 }

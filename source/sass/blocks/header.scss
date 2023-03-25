@@ -2,7 +2,11 @@
   width: 100%;
   position: fixed;
   background: $black-to-bottom;
-  z-index: 1;
+  z-index: 10;
+
+  @include vp-1023 {
+    position: absolute;
+  }
 }
 
 .header__wrapper {
@@ -34,6 +38,10 @@
   width: 215px;
   height: 55px;
 
+  @include hover-focus {
+    opacity: 0.5;
+  }
+
   @include vp-767 {
     width: 35px;
     height: 35px;
@@ -53,19 +61,26 @@
   flex-flow: row wrap;
   list-style-type: none;
   justify-content: space-between;
+  gap: 10px 10px;
   padding: 0;
   padding-top: 4px;
   margin: 0;
   background: $black-to-bottom;
 
   @include vp-1023 {
-    width: 100px;
+    max-width: fit-content;
+    min-width: 220px;
+    gap: 20px;
     padding: 0;
+    justify-content: flex-end;
   }
 }
 
 .header__item {
+  min-width: 150px;
+
   @include vp-1023 {
+    min-width: 40px;
     width: 40px;
     height: 40px;
   }
@@ -124,21 +139,25 @@
   }
 }
 
-.header__button-wrapper {
-  max-width: 200px;
-  min-height: 40px;
-  margin: 0;
-  margin-top: 6px;
-  margin-right: 60px;
-  // border: 1px solid $alice-blue;
-  border-radius: 3px;
-  align-self: flex-start;
-  padding-top: 5px;
+// .header__button-wrapper {
+//   max-width: 160px;
+//   min-height: 40px;
+//   border: 1px solid $alice-blue;
+//   border-radius: 3px;
+//   align-self: flex-start;
+//   padding-top: 5px;
+//   padding-right: 16px;
+//   padding-bottom: 7px;
+//   padding-left: 16px;
+//   margin: 0;
+//   margin-top: 5px;
+//   margin-right: 60px;
+//   cursor: pointer;
 
-  @include vp-1023 {
-    display: none;
-  }
-}
+//   @include vp-1023 {
+//     display: none;
+//   }
+// }
 
 .header__button {
   font-family: $ff-roboto;
@@ -149,14 +168,27 @@
   letter-spacing: 0.05em;
   color: $alice-blue;
   text-transform: uppercase;
+  user-select: none;
+  max-width: 160px;
+  min-height: 40px;
   border: 1px solid $alice-blue;
-  padding-top: 7px;
-  padding-right: 17px;
-  padding-bottom: 12px;
+  border-radius: 3px;
+  align-self: flex-start;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
   padding-left: 16px;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 60px;
+
+  @include vp-1023 {
+    display: none;
+  }
 
   @include hover {
     color: $deep-sky-blue;
+    opacity: 0.8;
   }
 
   @include focus {
@@ -166,7 +198,7 @@
   }
 
   @include active-active {
-    background-color: $deep-sky-blue;
+    color: $black-pearl;
     opacity: 1;
   }
 

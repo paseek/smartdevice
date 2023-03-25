@@ -62,11 +62,13 @@
   gap: 85px;
   list-style-type: none;
   padding: 0;
+  padding-bottom: 85px;
   margin: 0;
 
   @include vp-1023 {
     gap: 30px;
     grid-template-columns: 1fr;
+    padding-bottom: 30px;
   }
 }
 
@@ -74,10 +76,11 @@
   position: relative;
 
   h3 {
-    position: absolute;
+    position: relative;
     top: 46px;
     left: 40px;
     max-width: 190px;
+    max-height: 500px;
     font-family: $ff-roboto;
     font-weight: 400;
     font-size: 20px;
@@ -85,10 +88,12 @@
     color: $color-default-white;
     margin: 0;
     z-index: 1;
+    overflow: auto;
 
     @include vp-1023 {
       top: 36px;
       left: 45px;
+      max-height: 150px;
     }
 
     @include vp-767 {
@@ -123,21 +128,15 @@
   @include vp-1023 {
     height: 250px;
   }
-}
 
-.services__link-image {
-  position: absolute;
-  z-index: 0;
-}
-
-.services__link-image img {
-  height: 650px;
-  object-fit: cover;
-  object-position: right bottom;
-
-  @include vp-1023 {
-    height: 250px;
-    object-position: center;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background-color: $color-black-pearl;
   }
 }
 

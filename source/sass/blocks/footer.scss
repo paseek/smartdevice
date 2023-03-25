@@ -5,6 +5,10 @@
   @include vp-1023 {
     min-height: 465px;
   }
+
+  @include vp-767 {
+    min-height: 0;
+  }
 }
 
 .footer__wrapper {
@@ -57,6 +61,10 @@
   margin-bottom: 24px;
   margin-left: -4px;
 
+  @include hover-focus {
+    opacity: 0.5;
+  }
+
   @include vp-1023 {
     margin-left: 0;
   }
@@ -71,8 +79,9 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 0 16px;
   margin: 0;
+  margin-top: 5px;
   margin-left: 6px;
   padding: 0;
 
@@ -84,14 +93,14 @@
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 }
 
 .footer__social-link {
   display: inline-block;
   vertical-align: middle;
-  padding: 5px;
+  padding: 0 5px;
 
   @include hover {
     .footer__social-icon {
@@ -265,6 +274,8 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-left: 2px;
+  margin-left: -2px;
 
   &--site {
     width: 50%;
@@ -281,6 +292,12 @@
     @include vp-1023 {
       padding-top: 0;
     }
+
+    @include vp-767 {
+      .footer__nav-item:not(:last-child):first-child {
+        margin-top: 0;
+      }
+    }
   }
 
   @include vp-767 {
@@ -294,7 +311,8 @@
     margin-bottom: 5px;
 
     @include vp-767 {
-      margin-bottom: 17px;
+      // margin-bottom: 17px;
+      margin-bottom: 5px;
 
       &:first-child {
         margin-top: 10px;
@@ -339,13 +357,9 @@
     line-height: 25px;
   }
 
-  @include hover {
+  @include hover-focus {
     color: $deep-sky-blue;
-  }
-
-  @include focus {
-    outline: 2px solid $deep-sky-blue;
-    border-radius: 5px;
+    outline: none;
   }
 }
 
@@ -363,28 +377,6 @@
     margin-top: 8px;
   }
 }
-
-// .is-active {
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 17px;
-//     right: 0;
-//     width: 15px;
-//     height: 1px;
-//     background-color: $silver;
-//   }
-
-//   &::after {
-//     transform: rotate(90deg);
-//   }
-// }
-
-// .footer__nav-wrapper.is-closed .footer__nav-list--site,
-// .footer__nav-wrapper.is-closed .footer__nav-list--contacts {
-//   display: none;
-// }
 
 .is-active[data-accordion] {
   &::after {

@@ -9,6 +9,7 @@
     position: absolute;
     object-fit: cover;
     z-index: -1;
+    background-color: $black-pearl;
   }
 
   @include vp-1023 {
@@ -64,6 +65,7 @@
 }
 
 .promo__wrapper p {
+  max-width: 685px;
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -102,6 +104,8 @@
   background-color: $deep-sky-blue;
   border-radius: 3px;
   padding: 17px 27px;
+  margin-bottom: 40px;
+  user-select: none;
 
   @include hover-focus {
     transition: background $trans-default;

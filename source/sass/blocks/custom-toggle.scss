@@ -39,6 +39,10 @@
 
     padding-left: 36px;
 
+    // @include hover-focus {
+    //   color: $black-pearl;
+    // }
+
     @include vp-1023 {
       padding-left: 25px;
     }
@@ -146,8 +150,10 @@
 
   .input-message {
     position: absolute;
-    left: 11px;
-    top: -15px;
+    left: 0;
+    top: 20px;
+    // left: 11px;
+    // top: -15px;
 
     &.is-invalid {
       color: #ff0000;
@@ -158,3 +164,25 @@
     }
   }
 }
+
+// .custom-toggle {
+//   .custom-toggle__icon {
+//     @include focus {
+//       border: 1px solid $black-pearl;
+//     }
+
+//     @include hover {
+//       border: 1px solid $black-pearl;
+//     }
+//   }
+
+//   .custom-toggle__label {
+//     @include focus {
+//       color: $black-pearl;
+//     }
+
+//     @include hover {
+//       color: $black-pearl;
+//     }
+//   }
+// }

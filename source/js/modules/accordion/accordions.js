@@ -111,6 +111,7 @@ export class Accordions {
   openAccordion(element, transition = true) {
     const parentElement = element.closest('[data-accordion="parent"]');
     const contentElement = element.querySelector('[data-accordion="content"]');
+    const readMoreButton = document.querySelector('[data-init-tab="button"]');
     this._openHeight += contentElement.scrollHeight;
 
     if (parentElement.hasAttribute('data-single')) {
@@ -119,6 +120,7 @@ export class Accordions {
 
     element.classList.add('is-active');
     if (transition) {
+      readMoreButton.textContent = 'Свернуть';
       contentElement.style.maxHeight = `${this._openHeight}px`;
     } else {
       contentElement.style.transition = 'none';
@@ -138,11 +140,13 @@ export class Accordions {
 
   closeAccordion(element, transition = true) {
     const contentElement = element.querySelector('[data-accordion="content"]');
+    const readMoreButton = document.querySelector('[data-init-tab="button"]');
     if (!contentElement) {
       return;
     }
     element.classList.remove('is-active');
     if (transition) {
+      readMoreButton.textContent = 'Подробнее';
       contentElement.style.maxHeight = '0';
     } else {
       contentElement.style.transition = 'none';
