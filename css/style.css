@@ -733,7 +733,6 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(3, 16, 27, 0.7);
   cursor: pointer;
 }
 
@@ -788,6 +787,7 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+  background-color: rgba(3, 16, 27, 0.7);
 }
 
 .modal__title {
@@ -947,6 +947,7 @@ button,
   color: #ffffff;
   opacity: 0.8;
   padding-left: 34px;
+  cursor: pointer;
 }
 
 .modal__form .modal__checkbox::before {
@@ -2189,19 +2190,28 @@ button,
 }
 
 .feedback__checkbox {
-  position: absolute;
-  left: 9px;
-  top: 9px;
+  position: relative;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
   opacity: 0.8;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.feedback__checkbox::before {
+  position: absolute;
+  content: "";
   width: 15px;
   height: 15px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid #ffffff;
   border-radius: 2px;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .feedback__agreed {
@@ -2213,8 +2223,30 @@ button,
   align-self: end;
 }
 
-.feedback__agreed label.focus-visible:focus {
-  outline: 2px solid #041827;
+.feedback__agreed.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.feedback__form [type=checkbox]:focus + .feedback__checkbox {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.feedback__form input[type=checkbox]:checked + .feedback__checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  margin: auto;
+  width: 7px;
+  height: 4px;
+  border-radius: 1px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .feedback__form input:hover,
@@ -2722,12 +2754,19 @@ button,
   }
 
   .feedback__checkbox {
-    top: 1px;
+    padding-left: 25px;
+  }
+
+  .feedback__checkbox::before {
     left: 0;
   }
 
   .feedback__agreed {
     margin-bottom: 4px;
+  }
+
+  .feedback__form input[type=checkbox]:checked + .feedback__checkbox::after {
+    left: 4px;
   }
 
   .footer {
@@ -3058,6 +3097,10 @@ button,
     margin-left: 5px;
   }
 
+  .feedback__form input[type=checkbox]:checked + .feedback__checkbox::after {
+    bottom: 1px;
+  }
+
   .footer {
     min-height: 0;
   }
@@ -3230,10 +3273,6 @@ button,
   .feedback__wrapper {
     padding-bottom: 89px;
   }
-
-  .feedback__checkbox {
-    top: 7px;
-  }
 }
 
 @media (hover: hover) {
@@ -3323,6 +3362,10 @@ button,
     transition: background 0.3s ease;
     color: #00b2ff;
     background: #f2f5f6;
+  }
+
+  .feedback__agreed:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 
   .footer__logo:hover:not(.focus-visible) {
