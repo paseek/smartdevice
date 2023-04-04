@@ -197,36 +197,36 @@
 }
 
 .feedback__checkbox {
-  position: absolute;
-  left: 9px;
-  top: 9px;
+  position: relative;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
   opacity: 0.8;
-  width: 15px;
-  height: 15px;
-  background-color: transparent;
-  border: 1px solid $color-default-white-opacity;
-  border-radius: 2px;
+  padding-left: 36px;
+  cursor: pointer;
 
   @include vp-1023 {
-    top: 1px;
-    left: 0;
+    padding-left: 25px;
   }
 
-  @include vp-374 {
-    top: 7px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    @include vp-1023 {
+      left: 0;
+    }
   }
-
-  // @include focus {
-  //   border: 1px solid $black-pearl;
-  // }
-
-  // @include hover {
-  //   border: 1px solid $black-pearl;
-  // }
 }
 
 .feedback__agreed {
@@ -243,10 +243,36 @@
     margin-left: 5px;
   }
 
-  label {
-    @include focus {
-      outline: 2px solid $black-pearl;
-    }
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.feedback__form [type="checkbox"]:focus + .feedback__checkbox {
+  outline: 2px solid $color-default-white;
+  outline-offset: 2px;
+}
+
+.feedback__form input[type="checkbox"]:checked + .feedback__checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  margin: auto;
+  width: 7px;
+  height: 4px;
+  border-radius: 1px;
+  border-left: 2px solid $color-default-white;
+  border-bottom: 2px solid $color-default-white;
+  transform: rotate(-45deg);
+
+  @include vp-1023 {
+    left: 4px;
+  }
+
+  @include vp-767 {
+    bottom: 1px;
   }
 }
 
